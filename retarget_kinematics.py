@@ -14,7 +14,7 @@ def get_bend_angle(wrist, base, tip):
     return angle
 
 # 1. Load the model with hands
-model = mujoco.MjModel.from_xml_path("unitree_g1/scene_with_hands.xml")
+model = mujoco.MjModel.from_xml_path("unitree_g1/grasp_scene.xml")
 data = mujoco.MjData(model)
 
 # 2. Find the IDs for the right hand joints

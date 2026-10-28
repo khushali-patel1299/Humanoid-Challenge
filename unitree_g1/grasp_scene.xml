@@ -1,0 +1,17 @@
+<mujoco>
+    <!-- 2. Add our custom objects to the world -->
+    <worldbody>
+        <!-- A wooden table -->
+        <body name="table" pos="0.3 -0.3 0.6">
+            <geom type="box" size="0.2 0.2 0.05" rgba="0.6 0.4 0.2 1" friction="1 0.005 0.0001"/>
+        </body>
+
+        <!-- The Folded Paper (V-Shape approximation) -->
+        <body name="folded_paper" pos="0.3 -0.3 0.7">
+            <freejoint/> <!-- This tells MuJoCo the object can be picked up -->
+            <!-- Two angled thin boxes to simulate the folds -->
+            <geom type="box" size="0.002 0.03 0.05" pos="-0.02 0 0" euler="0 0 -45" rgba="1 1 1 1" mass="0.01"/>
+            <geom type="box" size="0.002 0.03 0.05" pos="0.02 0 0" euler="0 0 45" rgba="1 1 1 1" mass="0.01"/>
+        </body>
+    </worldbody>
+</mujoco>
